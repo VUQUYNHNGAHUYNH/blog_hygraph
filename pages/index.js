@@ -19,6 +19,7 @@ export default function Home({ posts }) {
             <PostCard post={post.node} key={post.title} />
           ))}
         </div>
+        hi
       </main>
     </>
   );
