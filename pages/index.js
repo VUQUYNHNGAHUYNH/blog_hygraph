@@ -12,15 +12,14 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mx-auto w-full overflow-x-hidden">
         <Categories />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:max-w-[80%]">
           {posts.map((post) => (
             <PostCard post={post.node} key={post.title} />
           ))}
         </div>
-        hi
-      </main>
+      </div>
     </>
   );
 }

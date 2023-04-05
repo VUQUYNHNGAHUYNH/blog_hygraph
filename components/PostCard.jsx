@@ -5,13 +5,13 @@ import React from "react";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="flex items-center items-startjustify-center lg:flex-col p-6 bg-slate-100 shadow-xl shadow-gray-200">
+    <div className="flex items-center items-startjustify-center lg:flex-col p-6 rounded-sm bg-gray-50 shadow-lg shadow-gray-300">
       <Image
         src={post.featuredImage.url}
         alt={post.title}
         width={200}
         height={50}
-        className="mr-6 lg:mb-2 lg:h-[200px] lg:w-[280px]"
+        className="mr-6 lg:mb-2 lg:h-[200px] lg:w-[280px] rounded-xl"
       />
 
       <div className="flex basis-2/3 flex-col lg:flex-col-reverse gap-4 items-start justify-center">
@@ -36,7 +36,7 @@ const PostCard = ({ post }) => {
         <p className="hidden lg:block text-gray-500 font-medium text-sm 2xl:text-base">
           {post.excerpt}
         </p>
-        <h1 className="text-xl xl:text-xl font-bold text-left cursor-pointer text-sky-700 hover:text-sky-600">
+        <h1 className="font-averia text-lg md:text-xl xl:text-2xl font-semibold text-left cursor-pointer text-sky-700 hover:text-sky-600">
           <Link href={`/post/${post.slug}`}>{post.title}</Link>
         </h1>
         <span className="hidden lg:block text-gray-500 font-medium text-sm ">
